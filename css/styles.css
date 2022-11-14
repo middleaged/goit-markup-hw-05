@@ -94,8 +94,25 @@ ul {
   line-height: 1.14;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
-
+.current {
+  position: relative;
+}
+.navigation-site.current::after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  background-color: var(--accent);
+  border-radius: 2px;
+}
 .navigation-site-item:not(:last-child) {
   margin-right: 50px;
 }
@@ -124,6 +141,10 @@ ul {
   align-items: center;
   font-weight: 500;
   line-height: 1.17;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
 .contacts-item {
   padding-top: 32px;
@@ -190,6 +211,10 @@ ul {
   border-right: 0;
   border-bottom: 0;
   border-left: 0;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
 .button-hero:hover,
 .button-hero:focus {
@@ -205,6 +230,8 @@ ul {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
   position: absolute;
@@ -212,9 +239,20 @@ ul {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
+  border-radius: 4px;
   width: 528px;
   height: 581px;
 }
+.modal-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 8px;
+  margin-right: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
@@ -334,6 +372,10 @@ ul {
   border-radius: 50%;
   background-color: var(--main-background-color);
   color: var(--icons-color);
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
 
 .social-link:hover,
@@ -371,9 +413,17 @@ ul {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition-property: fill, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
 .customer-icon {
   fill: var(--icons-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
 .customers-link:hover,
 .customers-link:focus {
@@ -406,6 +456,10 @@ ul {
   font-style: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
 .adress-list-item:not(:last-child) {
   margin-bottom: 9px;
@@ -414,6 +468,10 @@ ul {
   color: var(--footer-color-contacts);
   line-height: 1.71;
   letter-spacing: 0.03em;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
 .adress-item-maps:hover,
 .adress-item-maps:focus,
@@ -456,6 +514,10 @@ ul {
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
 .footer-social-link:hover,
 .footer-social-link:focus {
@@ -483,6 +545,10 @@ ul {
   border-radius: 4px;
   border: none;
   padding: 6px 22px;
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
 .filters-button-one {
   background-color: var(--third-background-color);
@@ -497,6 +563,10 @@ ul {
   border-radius: 4px;
   border: none;
   padding: 6px 25px;
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
 .filters-button-one:hover,
 .filters-button-one:focus {
@@ -524,6 +594,10 @@ ul {
   margin-right: 30px;
   border: 1px solid #eeeeee;
   border-top: none;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
 .porfolio-item:nth-child(3n) {
   margin-right: 0;
@@ -535,6 +609,9 @@ ul {
 .porfolio-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.porfolio-item:hover .portfolio-text-description {
+  transform: translateY(-100%);
 }
 .text-container {
   padding: 20px 24px;
@@ -550,4 +627,20 @@ ul {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
+}
+.portfolio-text-box {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-text-description {
+  position: absolute;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+  letter-spacing: 0.03em;
+  color: var(--main-background-color);
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
